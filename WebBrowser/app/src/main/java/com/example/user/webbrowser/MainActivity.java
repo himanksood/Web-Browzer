@@ -17,6 +17,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     SQLiteDatabase db;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +111,25 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Cursor cr = db.rawQuery("Select * from Password",null);
                 cr.moveToFirst();
+class calculation
+
+{
+	void sum(int a,int b);
+	{ 
+		System.out.println(a+b);
+	}
+	void sum(double a,double b);
+	{
+		System.out.println(a+b);
+	}
+    public static void main(String[] args) 
+	{
+		calculation obj=new calculation();
+		obj.sum (20,20);
+		obj.sum (10.5,0.00);
+
+}
+}
                 if(e.getText().toString().equals(cr.getString(0)))
                 {
                     d.dismiss();
